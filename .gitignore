@@ -1,0 +1,5 @@
+mc-backups
+mc-data
+.idea
+*.xml
+.venv
