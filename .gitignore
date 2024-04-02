@@ -1,5 +1,6 @@
 mc-backups
-mc-data
-.idea
+data
+/.idea/
 *.xml
 .venv
+/data/

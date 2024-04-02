@@ -35,7 +35,7 @@ services:
 
     volumes:
       # attach the relative directory 'data' to the container's /data path
-      - data:/data
+      - ./data:/data
 
   backups:
     image: itzg/mc-backup
@@ -48,8 +48,5 @@ services:
       PRE_BACKUP_SCRIPT: |
         echo "Starting Backup..."
     volumes:
-      - data:/data:ro
+      - ./data:/data:ro
       - ./mc-backups:/backups
-
-volumes:
-  data: {}
