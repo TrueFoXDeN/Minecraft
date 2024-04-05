@@ -4,6 +4,7 @@ services:
   mc:
     image: itzg/minecraft-server
     user: "1000:1000"
+    restart: unless-stopped
     tty: true
     stdin_open: true
     container_name: minecraft
@@ -42,6 +43,7 @@ services:
   backups:
     image: itzg/mc-backup
     user: "1000:1000"
+    restart: unless-stopped
     depends_on:
       mc:
         condition: service_healthy
