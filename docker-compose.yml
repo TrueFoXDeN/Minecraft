@@ -4,6 +4,7 @@ services:
   mc:
     image: itzg/minecraft-server
     user: "1000:1000"
+    userns_mode: "host"
     restart: unless-stopped
     tty: true
     stdin_open: true
