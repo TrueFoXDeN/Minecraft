@@ -32,20 +32,3 @@ services:
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - ./data:/data
-
-  backups:
-    image: itzg/mc-backup
-    user: "1000:1000"
-    restart: unless-stopped
-    depends_on:
-      mc:
-        condition: service_healthy
-    environment:
-      BACKUP_INTERVAL: "10m"
-      RCON_HOST: mc
-      PRE_BACKUP_SCRIPT: |
-        echo "Starting Backup..."
-      PRUNE_BACKUPS_COUNT: 3
-    volumes:
-      - ./data:/data:ro
-      - ./mc-backups:/backups
