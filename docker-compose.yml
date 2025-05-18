@@ -17,6 +17,9 @@ services:
       VIEW_DISTANCE: 32
       OPS: |
         FoXDeN
+      WHITELIST: |
+        FoXDeN
+        dome182
       TYPE: CUSTOM
       GENERIC_PACKS: GT_New_Horizons_2.7.4_Server_Java_17-21
       GENERIC_PACKS_SUFFIX: .zip
